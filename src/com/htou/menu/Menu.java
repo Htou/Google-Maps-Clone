@@ -23,9 +23,7 @@ public class Menu extends JFrame {
     private JPanel maps_panel;
     private JTextField searchLocationB;
 
-    private static final RenderingMode HARDWARE_ACCELERATED = RenderingMode.HARDWARE_ACCELERATED;
-
-    private Engine engine = Engine.newInstance(EngineOptions.newBuilder(HARDWARE_ACCELERATED).licenseKey("").build());
+    private Engine engine = Engine.newInstance(EngineOptions.newBuilder(RenderingMode.HARDWARE_ACCELERATED).licenseKey("").build());
     private Browser browser = engine.newBrowser();
     private BrowserView view = BrowserView.newInstance(browser);
 
